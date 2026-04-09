@@ -1,12 +1,15 @@
 const express = require("express");
-const User = require("../models/users");
-const {HandleGetAllUsers,handleGetById,hanldeAddUser,handleUpdateById,handleDeleteById} = require('../controllers/userControler')
+// const User = require("../models/users");
+const {
+  HandleGetAllUsers,
+  handleGetById,
+  hanldeAddUser,
+  handleUpdateById,
+  handleDeleteById,
+} = require("../controllers/userControler");
 const UserRouter = express.Router();
 
-
-UserRouter.route("/")
-  .get(HandleGetAllUsers)
-  .post(hanldeAddUser);
+UserRouter.route("/").get(HandleGetAllUsers).post(hanldeAddUser);
 
 //// mongo db
 UserRouter.route("/:id")

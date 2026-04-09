@@ -8,7 +8,8 @@ const port = 8000;
 
 
 //connection
-ConnectToDb("mongodb://localhost:27017/piyushgargnodejs"); //async function
+ConnectToDb("mongodb://localhost:27017/piyushgargnodejs")
+//.then(()=>console.log('db connected')).catch(e=> console.log(e)); //async function
 
 
 //middlewares
